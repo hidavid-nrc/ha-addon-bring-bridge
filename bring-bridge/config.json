@@ -1,0 +1,26 @@
+{
+  "name": "Bring!-Bridge (FastAPI)",
+  "version": "1.0.0",
+  "slug": "bring_bridge",
+  "description": "Read/write Bring! via a small API for ChatGPT/Shortcuts",
+  "arch": ["aarch64","armv7","amd64"],
+  "startup": "services",
+  "boot": "auto",
+  "ports": { "8000/tcp": 8000 },
+  "ports_description": { "8000/tcp": "HTTP API (via Cloudflare Tunnel)" },
+  "ingress": false,
+  "panel_icon": "mdi:cart",
+  "options": {
+    "api_key": "",
+    "bring_email": "",
+    "bring_password": "",
+    "bring_list_name": ""
+  },
+  "schema": {
+    "api_key": "str?",
+    "bring_email": "str",
+    "bring_password": "str",
+    "bring_list_name": "str?"
+  },
+  "image": null
+}
